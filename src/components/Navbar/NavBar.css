@@ -1,0 +1,21 @@
+.pokenav{
+    box-shadow: 0px 2px 5px 1px rgba(83, 83, 83, 0.1);
+    height: 6rem;
+}
+
+.pokenav-logo{
+    width: 40%;
+}
+
+.pokenav-links{
+
+}
+
+.pokenav-link{
+    text-decoration: none;
+    margin: 0 50px;
+}
+
+.pokenav-link.active{
+    color: green;
+}
