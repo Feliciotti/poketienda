@@ -1,0 +1,42 @@
+.checkout-form{
+    width: 50%;
+    height: 40rem;
+    border: 1px solid black;
+}
+.form-inputs-container{
+    width: 100%;
+}
+
+.inputs-row{
+    /* gap: 6rem; */
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+.input-label{
+    font-size: 0.7rem;
+}
+.checkoutForm-label{
+    width: 100%;
+}
+
+.delivery-selector{
+    width: 50rem;
+    height: 10rem;
+    border: 1px solid black;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.delivery-selector:hover{
+    background-color: blueviolet;
+}
+
+.delivery-title--span{
+    color: rgba(0, 0, 0, 0.54);
+    margin-left: 1rem
+}

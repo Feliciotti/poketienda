@@ -1,39 +1,45 @@
-import { useContext } from "react"
-import { useParams } from "react-router-dom"
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 //components
-import { ItemCounter } from "./ItemCounter"
-import { CartContext } from "../../context/CartContext"
 
-const ItemDetail = ({item}) =>{
+const ItemDetail = ({item, itemId}) =>{
+   const { addItem, isInCart, removeItem } = useContext(CartContext)
 
-    const { addItem } = useContext(CartContext)
-    const id = useParams().id
+   const onAdd = () =>{
+      addItem({...item, quantity: 1})
+   }
 
+   return(
+      <section id='item-detail' className="container-fluid d-flex justify-content-center align-items-center">
+         <div className='detail-container d-flex'>
 
-    const onAdd = (quantity) =>{
-        addItem( {...item, quantity} )
-    }
-
-    return(
-        <section id='item-detail' className="container-fluid d-flex justify-content-center align-items-center">
-            <div className='detail-container d-flex'>
-
-                <div className='detail-imgContainer d-flex align-items-center'>
-                    <img className='detail-img w-100' src={item.img} alt="" />
-                </div>
-                <div className='detail-desc d-flex flex-column align-items-center justify-content-center'>
-                    <div className="d-flex align-items-center">
-                        <h4 className='item-title fs-1'>{item.product}</h4> <span>stock: {item.stock}</span>
-                    </div>
-                    <p className="fs-5">{item.desc}</p>
-
-                    <ItemCounter item={item} onAdd={onAdd}/>
-                </div>
-                
+            <div className='detail-imgContainer'>
+               <img className='detail-img w-100' src={item.img} alt="" />
             </div>
-        </section>
-    )
+            <div className='detail-desc d-flex flex-column align-items-center justify-content-center'>
+               <div className="d-flex align-items-center">
+                  <h4 className='item-title fs-1'>{item.product}</h4> <span>stock: {item.stock}</span>
+               </div>
+                  <p className="fs-5">{item.desc}</p>
+                    
+                  {!isInCart(itemId) ? (
+                     <>
+                        <button className="toCart-bttn cartAdd-bttn" onClick={onAdd}>
+                           <FontAwesomeIcon icon={faCartPlus} />
+                        </button>
+                     </>
+                  ):(
+                     <button className="toCart-bttn cartRemove-bttn" onClick={() => removeItem(item)}>
+                        eliminar del carrito
+                     </button>
+                  )}
+            </div>
+                
+         </div>
+      </section>
+   )
 }
 
 export default ItemDetail

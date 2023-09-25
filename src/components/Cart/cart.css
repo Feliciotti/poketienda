@@ -1,6 +1,5 @@
 #cart{
     min-height: calc(100vh - 6rem);
-    padding: 3rem 0;
     width: 100%;
 }
 .cart-list-container{
@@ -17,9 +16,9 @@
 
 
 .cart-list{
-    height: 110px;
+    height: fit-content;
     width: 70%;
-    border: 1px solid beige;
+    border: 1px solid black;
 }
 .list-product-imgContainer{
     width: 100px;

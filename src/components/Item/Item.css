@@ -1,16 +1,11 @@
-.itemListContainer{
-    padding: 5em;
+/*----------Item.jsx-------------*/
+.item-card-container{
+    height: fit-content;
+    width: fit-content;
+    text-decoration: none;
 }
-/*-----------------------*/
-.itemList{
-    flex-wrap: wrap;
-    gap: 50px;
-    padding: 30px;
-}
-/*-----------------------*/
-.item-card{
-    padding: 1rem;
-    align-items: center;
+.item-card-container:hover{
+    
 }
 .card-imgContainer{
     height: 60%;
@@ -27,11 +22,10 @@
 }
 /*-----------------------*/
 #item-detail{
-    height: calc(100vh - 6rem);
 }
 .detail-container{
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     justify-content: space-around;
     border: solid 1px black;
 }
@@ -46,7 +40,7 @@
     transition: 0.5s;
 }
 .detail-img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .detail-desc{
     width: 40%;
@@ -76,10 +70,25 @@ span{
     color: black;
 }
 
-#addToCart-bttn{
+.toCart-bttn{
+    border: none;
     padding: 10px 20px;
+    width: 15rem;
+    height: 4rem;
 }
 
+.cartAdd-bttn{
+    background-color: black;
+    color:white;
+}
+.cartRemove-bttn{
+    background-color: rgb(199, 199, 199);
+    color: rgb(102, 102, 102);
+    transition: 0.5s;
+}
+.cartRemove-bttn:hover{
+    color: black
+}
 .item-title, p{
     color: black;
     text-align: center;

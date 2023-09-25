@@ -23,12 +23,10 @@ function CartState(props) {
             })
     }
 
-    const removeItem = (id) =>{
-        let toRemove = state.findIndex(item => item.id === id)
-        let updated = state.filter(item => item != toRemove)
+    const removeItem = (product) =>{
         dispatch({
             type: 'REMOVE_FROM_CART',
-            payload: {...updated}
+            payload: product
         })
     }
 
@@ -38,7 +36,7 @@ function CartState(props) {
         })
     }
 
-    const getIfItsInCart = (id) =>{
+    const isInCart = (id) =>{
         return state.cart.find(isInCart => isInCart.id === id)
     }
 
@@ -59,7 +57,7 @@ function CartState(props) {
         addItem,
         removeItem,
         clearCart,
-        getIfItsInCart,
+        isInCart,
         totalItems,
         totalPurchaseValue
     }}>

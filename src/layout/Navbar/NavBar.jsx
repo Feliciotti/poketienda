@@ -1,9 +1,12 @@
-import './NavBar.css'
+import { NavLink } from 'react-router-dom';
+//bootstrap
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import CartWidget from '../Cart/CartWidget'
-import { NavLink } from 'react-router-dom';
+//styles
+import './NavBar.css'
+//components
+import CartWidget from '../../components/Cart/CartWidget'
 
 const NavBar = () => {
   return (
