@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   useScrollTop()
   const [item, setItem] = useState({})
   const id = useParams().id
-
+  
   useEffect(()=>{
     const itemRef = doc(db, 'products', id)
     getDoc(itemRef)
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
 
 return (
   <>
-    <ItemDetail item={item} itemId={id}/>
+    <ItemDetail item={item}/>
   </>
   )
 }

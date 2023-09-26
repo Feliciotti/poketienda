@@ -1,3 +1,6 @@
-import {createContext} from 'react';
+import {createContext, useContext} from 'react';
 
-export const CartContext = createContext()
+const cartContext = createContext([])
+const useCartContext = () => useContext(cartContext)
+
+export {cartContext, useCartContext}

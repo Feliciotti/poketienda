@@ -2,11 +2,30 @@
   padding: 0;
   margin: 0;
 }
-body {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 15%, rgba(200,174,238,1) 75%, rgba(148,187,233,1) 100%);
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(218, 216, 216, 0.8);
 }
 
+.main-container, .pokenav, footer{
+  width: 80%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 2px 5px 1px rgba(83, 83, 83, 0.1);
+}
 .main-container{
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 8rem);
+  background: rgb(255,255,255);
+}
+
+.card-title{
+  font-family: 'VT323', monospace !important;
+}
+h1, h2, h3, p, span, .pokenav, button{
+  font-family: 'VT323', monospace;
 }

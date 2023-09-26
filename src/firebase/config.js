@@ -6,13 +6,14 @@ import { getFirestore } from 'firebase/firestore/lite';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAYDUr71RIZiQKxH1Zc14PtS_HSfUD3Vw4",
-  authDomain: "myecommerce-d0dab.firebaseapp.com",
-  projectId: "myecommerce-d0dab",
-  storageBucket: "myecommerce-d0dab.appspot.com",
-  messagingSenderId: "897066323149",
-  appId: "1:897066323149:web:255c0bd9408fb67089ad84"
+  apiKey: "AIzaSyBqYRb6U05FoQcSIiktyB-QWcclGTP76Ds",
+  authDomain: "poketienda-f52b1.firebaseapp.com",
+  projectId: "poketienda-f52b1",
+  storageBucket: "poketienda-f52b1.appspot.com",
+  messagingSenderId: "1091548023232",
+  appId: "1:1091548023232:web:6e8e6fcc0149f144f7a025"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

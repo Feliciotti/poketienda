@@ -1,36 +1,39 @@
 import { NavLink } from 'react-router-dom';
-//bootstrap
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 //styles
 import './NavBar.css'
 //components
 import CartWidget from '../../components/Cart/CartWidget'
 
-const NavBar = () => {
-  return (
-    <>
-      <Navbar className='pokenav'>
-        <Container className='pokenav-container'>
-          <Navbar.Brand href="/">
+export const NavBar = () => {
+  return ( //boostrap navbar
+      <nav className="navbar navbar-expand-lg bg-body-tertiary pokenav">
+        <div className="container-fluid">
+          <NavLink className='navbar-brand pokenav-link' to='/'>
             <img className='pokenav-logo' src="/Pokelogo.png" alt="" />
-          </Navbar.Brand>
-          <Nav className="pokenav-links">
-            <NavLink className='pokenav-link' to='/'>
-              Productos
-            </NavLink>
-            <NavLink className='pokenav-link' to='/contact'>
-              Contacto
-            </NavLink>
-            <NavLink className='pokenav-link' to='/cart'>
-              <CartWidget/>
-              </NavLink>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
+          </NavLink>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav align-items-center">
+              <li className="nav-item">
+                <NavLink className='pokenav-link' to='/'>
+                  Productos
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className='pokenav-link' to='/contact'>
+                  Contacto
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className='pokenav-link' to='/cart'>
+                  <CartWidget/>
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
   )
 }
-
-export default NavBar

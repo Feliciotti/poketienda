@@ -1,10 +1,9 @@
 import './counter.css'
 //context
-import { useContext } from 'react'
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/cartContext'
 
 const Counter = ({item, count}) => {
-    const { addItem } = useContext(CartContext)
+    const { addItem } = useCartContext()
 
     let maxReq = Number(item.stock)
     let quantityReq = Number(item.quantity)

@@ -1,6 +1,6 @@
 import { useRouteError, Link } from "react-router-dom"
 
-const NotFound = () => {
+export const NotFound = () => {
     const error = useRouteError()
   return (
     <div>
@@ -10,5 +10,3 @@ const NotFound = () => {
     </div>
   )
 }
-
-export default NotFound

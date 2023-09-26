@@ -1,9 +1,8 @@
 import Counter from "../Counter/Counter"
-import { useContext } from "react"
-import { CartContext } from "../../context/CartContext"
+import { useCartContext } from "../../context/cartContext"
 
 function CartDetail({productInCart}) {
-  const {removeItem} = useContext(CartContext)
+  const {removeItem} = useCartContext()
 
   return (
     <>
@@ -11,7 +10,7 @@ function CartDetail({productInCart}) {
         <div className='list-product-imgContainer d-flex align-items-center gap-3'>
             <img className='list-product-img' src={productInCart.img} alt="Miniatura del producto" />
             <div>
-              <p className='cart-product--section fs-3'>{productInCart.product} </p>
+              <p className='cart-product--section fs-3'>{productInCart.name} </p>
               <div className="d-flex">
                 <span onClick={() => removeItem(productInCart)}>Eliminar</span>
               </div>

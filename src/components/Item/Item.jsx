@@ -1,21 +1,29 @@
 import './Item.css'
-import Card from 'react-bootstrap/Card';
+import AddRemoveBttn from '../AddRemoveBttn/AddRemoveBttn'
 import { Link } from 'react-router-dom';
 
 const Item = ({pokemon}) => {
+  let parentCard = 'hiddenBttn'
+
   return (
-    /* link to ItemDetailContainer.jsx */
-    <Link className='item-card-container' to={`/item/${pokemon.id}`}>
-      <Card style={{width: '18rem', height: '25rem'}} className='item-card p-2 bg-transparent'>
-        <div className='card-imgContainer d-flex'>
-          <Card.Img className='card-img' variant="top" src={pokemon.img} />
+    <div className='item-card '>
+      {/* link to ItemDetailContainer.jsx */}
+      <Link className='card-content' to={`/item/${pokemon.id}`}>
+        <div className={'card p-3 ' + pokemon.type}>
+          <div className='d-flex align-items-center justify-content-between'>
+            <span className='h1'>{pokemon.name}</span>
+            <span className='h5 card-number'>#{pokemon.number}</span>
+          </div>
+            <div className='card-img-container d-flex'>
+              <img className='card-img' variant="top" src={pokemon.img} />
+            </div>
+            <div className='w-100 d-flex flex-column justify-content-center align-items-center'>
+            <span className='h3 m-5'>${pokemon.price}</span>
+          </div>
         </div>
-        <Card.Body className='w-100 d-flex flex-column justify-content-center align-items-center'>
-          <Card.Title>{pokemon.product}</Card.Title>
-          <Card.Text>${pokemon.price}</Card.Text>
-        </Card.Body>
-      </Card>
-    </Link>
+      </Link>
+      <AddRemoveBttn item={pokemon} bttnParent={parentCard}/>
+    </div>
   )
 }
 

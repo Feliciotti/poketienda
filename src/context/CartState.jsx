@@ -1,14 +1,14 @@
 import React from 'react'
 import { useReducer } from 'react'
-import { CartContext } from './CartContext'
-import CartReducer from './CartReducer'
+import { cartContext } from './cartContext'
+import cartReducer from './cartReducer'
 
 function CartState(props) {
 
     const initialState = {
         cart: []
     }
-    const [state, dispatch] = useReducer(CartReducer, initialState)
+    const [state, dispatch] = useReducer(cartReducer, initialState)
 
     const addItem = (order) => {
         state.cart.findIndex(product => product.id === order.id) > -1 ?
@@ -51,7 +51,7 @@ function CartState(props) {
     }
 
   return (
-    <CartContext.Provider
+    <cartContext.Provider
     value={{
         cart: state.cart,
         addItem,
@@ -62,7 +62,7 @@ function CartState(props) {
         totalPurchaseValue
     }}>
         {props.children}
-    </CartContext.Provider>
+    </cartContext.Provider>
   )
 }
 

@@ -1,5 +1,5 @@
 //dependencies
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 //db
 import db from '../../firebase/config';
@@ -8,12 +8,11 @@ import {addDoc, collection } from 'firebase/firestore/lite'
 import withRouter from './hoc/checkout'
 import CheckoutDetail from './CheckoutDetail';
 //context
-import { CartContext } from '../../context/CartContext';
-import PurchaseSuccess from './PurchaseSuccess';
+import { useCartContext } from '../../context/cartContext';
 
 
 const CheckoutStep3 = ({client, order, totalPurchaseValue}) => {
-  const { clearCart } = useContext(CartContext)
+  const { clearCart } = useCartContext()
   const [purchaseId, setPurchaseId] = useState('')
   const checkout3navigate = useNavigate()
     useEffect(() =>{

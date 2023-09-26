@@ -1,11 +1,10 @@
-import React, { useContext } from 'react'
 import { useLocation } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/cartContext'
 
 
 const PurchaseSuccess = () => {
   const location = useLocation()
-  const { clearCart } = useContext(CartContext)
+  const { clearCart } = useCartContext()
 
   clearCart()
 

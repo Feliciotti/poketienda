@@ -1,13 +1,13 @@
 //dependencies
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { CartContext } from "../../../context/CartContext";
+import { useCartContext } from "../../../context/cartContext";
 
 function withRouter(Component) {
   function ComponentWithRouterProp(props) {
 
     const [checkCart, setCheckCart] = useState([])
-    const { cart, totalPurchaseValue } = useContext(CartContext)
+    const { cart, totalPurchaseValue } = useCartContext()
     const location = useLocation()
       useEffect(() =>{
         cart.length > 0 ?
@@ -19,7 +19,7 @@ function withRouter(Component) {
     const productsInCart = cart.map((products) =>{
       return{
         id: products.id,
-        name: products.product,
+        name: products.name,
         quantityReq: products.quantity,
         totalValue: products.quantity * products.price
       }

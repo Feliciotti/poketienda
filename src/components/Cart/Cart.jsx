@@ -1,15 +1,14 @@
 //styles
 import './cart.css'
 //dependencies
-import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 //components
 import CartDetail from './CartDetail'
 //context
-import { CartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/cartContext'
 
 const Cart = () =>{
-   const {cart, clearCart, totalItems, totalPurchaseValue} = useContext(CartContext)
+   const {cart, clearCart, totalItems, totalPurchaseValue} = useCartContext()
    const navigate = useNavigate();
 
    const cartDetail = cart.map((productInCart) =>{
