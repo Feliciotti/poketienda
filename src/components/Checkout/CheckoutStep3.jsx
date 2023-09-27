@@ -43,28 +43,30 @@ const CheckoutStep3 = ({client, order, totalPurchaseValue}) => {
   }
 
   return (
-    <div>
+    <div className='main-child checkout3 d-flex align-items-center justify-content-center'>
       <div>
-        <span>
-          {client.full_name}
-        </span>
-        <span>{client.email}</span>
-        <span>{client.phone_number}</span>
-        <span>{
-          client.shipping ?
-            client.address
-          :
-            'Retira en Pueblo Paleta'
-          }
-        </span>
+        <div className='checkout-summary d-flex flex-column'>
+          <span >
+            {client.full_name}
+          </span>
+          <span  >{client.email}</span>
+          <span >{client.phone_number}</span>
+          <span >{
+            client.shipping ?
+              client.address
+            :
+              'Retira en Pueblo Paleta'
+            }
+          </span>
+        </div>
+        <div className='checkout-summary'>
+          {orderDetail}
+          <span>Total: ${totalPurchaseValue}</span>
+        </div>
       </div>
-      <div className='orderResume'>
-        {orderDetail}
-        <span>Total: ${totalPurchaseValue}</span>
-      </div>
-      <div>
-        <button type='submit' onClick={handleBuy}>Comprar</button>
-        <button onClick={handleCancel}>Cancelar</button>
+      <div className='form-bttns-wrapper d-flex flex-column align-items-center gap-5'>
+        <button className='form-bttn cart-bttn' type='submit' onClick={handleBuy}>Comprar</button>
+        <button className='form-bttn cart-bttn' onClick={handleCancel}>Cancelar X</button>
       </div>
     </div>
   )

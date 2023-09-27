@@ -19,13 +19,19 @@
   box-shadow: 0px 2px 5px 1px rgba(83, 83, 83, 0.1);
 }
 .main-container{
-  min-height: calc(100vh - 8rem);
+  height: fit-content;
   background: rgb(255,255,255);
+}
+
+.main-container>.main-child{
+  height: calc(100vh - 17rem);
+  width: 100%;
+  border: solid 1px red;
 }
 
 .card-title{
   font-family: 'VT323', monospace !important;
 }
-h1, h2, h3, p, span, .pokenav, button{
+h1, h2, h3, p, span, .pokenav, .input-label, .input{
   font-family: 'VT323', monospace;
 }

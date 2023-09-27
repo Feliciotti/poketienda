@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
             element: <ItemListContainer/>,
          },
          {
-            path: '/item/:id',
+            path: '/item/:name',
             element: <ItemDetailContainer/>
          },
          {

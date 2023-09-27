@@ -6,17 +6,19 @@ function CartDetail({productInCart}) {
 
   return (
     <>
-      <div className='cart-list d-flex align-items-center p-2'>
-        <div className='list-product-imgContainer d-flex align-items-center gap-3'>
-            <img className='list-product-img' src={productInCart.img} alt="Miniatura del producto" />
-            <div>
-              <p className='cart-product--section fs-3'>{productInCart.name} </p>
-              <div className="d-flex">
-                <span onClick={() => removeItem(productInCart)}>Eliminar</span>
-              </div>
-            </div>
+      <div className='product'>
+
+        <div className='product-detail'>
+          <div className='product-imgContainer'>
+              <img className='product-img' src={productInCart.img} alt="Miniatura del producto" />
+          </div>
+          <div className="product-name-wrapper">
+            <p className='product-name fs-3 m-0'>{productInCart.name} </p>
+            <span className="product-removeBttn" onClick={() => removeItem(productInCart)}>Eliminar</span>
+          </div>
         </div>
-        <div className="counter d-flex align-items-center gap-3">
+
+        <div className="d-flex">
           <Counter item={productInCart} count={productInCart.quantity} itemId={productInCart.id}/>
         </div>
       </div>

@@ -1,6 +1,6 @@
 //dependencies
 import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 //styles
 import './checkout.css'
 //hoc
@@ -32,64 +32,61 @@ const CheckoutStep2 = ({shipping}) => {
 
   return(
     <>
-      <form onSubmit={handleSubmit} onChange={handleChange} action="" className='d-flex gap-5 flex-column align-items-center checkout-form p-5 justify-content-between'>
+      <form onSubmit={handleSubmit} onChange={handleChange} 
+      className='main-child checkout2-form
+      d-flex flex-column align-items-center justify-content-evenly'>
         <h1>Datos</h1>
-        <div className='form-inputs-container d-flex justify-content-center'>
-          <div className='inputs-row d-flex flex-column'>
-            <div className='input-container'>
-              <label className='input-label' htmlFor="full-name">Nombre completo</label>
-              <input className='checkoutForm-label'
-              id='full-name'
-              name='full_name'
-              type="text"
-              value={clientData.name}
-              required placeholder='Ingrese su nombre completo'
-              autoComplete='true'/>
-            </div>
-            <div className='input-container'>
-              <label className='input-label' htmlFor="e-mail">Correo electrónico </label>
-              <input className='checkoutForm-label'
-              id='e-mail'
-              name='email'
-              type='email'
-              required placeholder='Ingrese su e-mail'
-              autoComplete='true'/>
-            </div>
+        <div className='form-inputs-container
+        d-flex flex-column align-items-center
+        gap-3'>
+          <div className='form-input-wrapper'>
+            <label className='input-label' htmlFor="full-name">nombre completo</label>
+            <input className='input'
+            id='full-name'
+            name='full_name'
+            type="text"
+            value={clientData.name}
+            required placeholder='Ingrese su nombre completo'
+            autoComplete='true'/>
           </div>
-          <div className='inputs-row d-flex flex-column'>
-            {shipping ?
-              <div className='input-container'>
-              <label className='input-label' htmlFor="address">Dirección</label>
-              <input className='checkoutForm-label'
-              id='address'
-              name='address'
-              type='text'
-              required placeholder='Ingrese nombre de calle y altura'
-              autoComplete='true'/>
-              </div>
-              : ''
-            }
-            <div className='input-container'>
-              <label className='input-label' htmlFor="phone-number">Teléfono</label>
-              <input className='checkoutForm-label'
-              id='phone-number'
-              name='phone_number'
-              type='text'
-              required placeholder='Ingrese su número telefónico'
-              autoComplete='true'/>
+          <div className='form-input-wrapper'>
+            <label className='input-label' htmlFor="e-mail">correo electrónico </label>
+            <input className='input'
+            id='e-mail'
+            name='email'
+            type='email'
+            required placeholder='Ingrese su e-mail'
+            autoComplete='true'/>
+          </div>
+          {shipping ?
+            <div className='form-input-wrapper'>
+            <label className='input-label' htmlFor="address">dirección</label>
+            <input className='input'
+            id='address'
+            name='address'
+            type='text'
+            required placeholder='Ingrese nombre de calle y altura'
+            autoComplete='true'/>
             </div>
+            : ''
+          }
+          <div className='form-input-wrapper'>
+            <label className='input-label' htmlFor="phone-number">teléfono</label>
+            <input className='input'
+            id='phone-number'
+            name='phone_number'
+            type='text'
+            required placeholder='Ingrese su número telefónico'
+            autoComplete='true'/>
           </div>
         </div>
         
-        <div>
-          <button onClick={handleReturn}>Atrás</button>
-          <button type='submit'>Siguiente</button>
+        <div className='form-bttns-wrapper d-flex justify-content-between'>
+          <button className='form-bttn cart-bttn' onClick={handleReturn}>Atrás</button>
+          <button className='form-bttn cart-bttn' type='submit'>Siguiente</button>
         </div>
       </form>
     </>
   )
 }
-
-// export default CheckoutStep2
-
 export default withRouter(CheckoutStep2)
