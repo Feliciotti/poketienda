@@ -5,7 +5,7 @@ import './NavBar.css'
 import CartWidget from '../../components/Cart/CartWidget'
 
 export const NavBar = () => {
-  return ( //boostrap navbar
+  return (
       <nav className="navbar navbar-expand-lg bg-body-tertiary pokenav">
         <div className="container-fluid">
           <NavLink className='navbar-brand pokenav-link' to='/'>

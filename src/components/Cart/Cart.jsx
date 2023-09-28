@@ -1,5 +1,6 @@
 //styles
 import './cart.css'
+import './pokeball.css'
 //dependencies
 import { useNavigate } from 'react-router-dom'
 //components

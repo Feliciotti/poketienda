@@ -11,12 +11,12 @@ const AddRemoveBttn = ({item, bttnParent}) => {
     <>
       {!isInCart(item.id) ? (
           <>
-            <button className={'cart-bttn cartAdd-bttn ' + bttnParent} onClick={onAdd}>
+            <button className={`cart-bttn cartAdd-bttn ${bttnParent}`} onClick={onAdd}>
                 agregar al carrito
             </button>
           </>
       ):(
-          <button className={'cart-bttn cartRemove-bttn ' + bttnParent} onClick={() => removeItem(item)}>
+          <button className={`cart-bttn cartRemove-bttn ${bttnParent}`} onClick={() => removeItem(item)}>
             eliminar del carrito
           </button>
       )}

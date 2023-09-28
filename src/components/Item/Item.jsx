@@ -11,7 +11,7 @@ const Item = ({pokemon}) => {
       {/* link to ItemDetailContainer.jsx */}
       <Link className='card-content' to={`/item/${pokemon.name}`}>
         {/* pokemon type used as class name for card background color */}
-        <div className={'card p-3 ' + pokemon.type}>
+        <div className={`card p-3 ${pokemon.type}`}>
 
           <div className='d-flex align-items-baseline justify-content-between'>
             <span className='h1'>{pokemon.name}</span>

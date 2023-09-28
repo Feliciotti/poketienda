@@ -1,3 +1,7 @@
+#navbarNav{
+  justify-content: flex-end;
+}
+
 .pokenav{
   height: 6rem;
   font-size: 1.5rem;

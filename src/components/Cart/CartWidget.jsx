@@ -1,14 +1,21 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react';
 import { useCartContext } from '../../context/cartContext';
 
 const CartWidget = () => {
   const {totalItems} =  useCartContext()
+  const [productsTrack, setProductsTrack] = useState('')
+  useEffect(()=>{
+    const timer = setTimeout(() => {
+      setProductsTrack('')
+    }, 1000);
+    return () => clearTimeout(timer), setProductsTrack('shake');
+
+  },[totalItems()])
+
   return (
-      <div>
-        <FontAwesomeIcon icon={faCartShopping} />
-        {totalItems() > 0 && <span>{totalItems()}</span>}
-        
+      <div className='pokewidget d-flex align-items-center justify-content-between'>
+        <div className={`pokeball ${productsTrack}`}/>
+        {totalItems() > 0 && <span className='pokewidget-counter'>{totalItems()}</span>}
       </div>
   )
 };

@@ -12,8 +12,7 @@ export const useGetDB = (setState, setLoad) =>{
       query(collection(db, 'products'), where('name','==', productName))
     : 
       query(collection(db, 'products'))
-    
-      console.log(queryCollection);
+
     getDocs(queryCollection)
       .then(res => {
         setState(res.docs.map(doc =>({...doc.data(), id: doc.id})))
