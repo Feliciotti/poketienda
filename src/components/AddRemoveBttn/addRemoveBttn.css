@@ -1,17 +1,3 @@
-.cart-bttn{
-  border: 1px solid rgba(42, 42, 42, 0.123);
-  font-family: 'VT323', monospace;
+.item-bttn{
   font-size: 1.5rem;
-}
-
-.cartAdd-bttn{
-  background-color: rgb(233, 179, 0);
-  color: rgb(38, 38, 38);
-}
-.cartRemove-bttn{
-  background-color: rgba(233, 179, 0, 0.5);
-  color: rgb(102, 102, 102);
-}
-.cartRemove-bttn:hover{
-  color: black
 }

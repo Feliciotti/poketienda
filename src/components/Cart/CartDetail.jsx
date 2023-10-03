@@ -9,12 +9,12 @@ function CartDetail({productInCart}) {
       <div className='product'>
 
         <div className='product-detail'>
-          <div className='product-imgContainer'>
+          <div className='product-img-container'>
               <img className='product-img' src={productInCart.img} alt="Miniatura del producto" />
           </div>
           <div className="product-name-wrapper">
-            <p className='product-name fs-3 m-0'>{productInCart.name} </p>
-            <span className="product-removeBttn" onClick={() => removeItem(productInCart)}>Eliminar</span>
+            <p className='fs-3 m-0'>{productInCart.name} </p>
+            <span className="product-remove" onClick={() => removeItem(productInCart)}>Eliminar</span>
           </div>
         </div>
 

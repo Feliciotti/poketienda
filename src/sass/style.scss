@@ -1,0 +1,23 @@
+/* settings */
+@import './1 - settings/colors';
+@import './1 - settings/text';
+
+
+/* bases */
+@import './2 - bases/base';
+@import './2 - bases/resets';
+
+/* elements */
+@import './3 - elements/button';
+@import './3 - elements/tittles';
+
+
+/* components */
+@import './4 - components/navbar';
+@import './4 - components/footer';
+@import './4 - components/item';
+@import './4 - components/counter';
+@import './4 - components/cart';
+
+/* utils */
+@import './5 - utils/utils';

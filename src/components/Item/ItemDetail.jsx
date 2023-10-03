@@ -1,22 +1,65 @@
 //components
+import { useNavigate } from 'react-router-dom'
 import AddRemoveBttn from '../AddRemoveBttn/AddRemoveBttn'
 
 const ItemDetail = ({item}) =>{
-  let parentItemDetail = 'toCart-bttn'
-  return(
-    <section className="main-child container-fluid d-flex justify-content-center align-items-center">
-      <div className='detail-container d-flex'>
+  let parentItemDetail = 'pokedex-bttn'
+  let navigatehome = useNavigate()
 
-      <div className='detail-imgContainer'>
-        <img className='detail-img w-100' src={item.img} alt="" />
-      </div>
-      <div className='detail-info-wrapper d-flex flex-column align-items-center justify-content-center'>
-        <div className="d-flex align-items-center">
-          <h4 className='item-title fs-1'>{item.name}</h4> <span>stock: {item.stock}</span>
+  return(
+    <section className="main-child">
+      <div className='pokedex-container content-box'>
+        <span className='pokedex-circle'></span>
+
+        <div className='pokedex-left-wrapper'>
+          <div className='borders-top-wrapper d-flex'>
+            <span className='pokedex-left-border inner-border border--top1'/>
+            <div className='borders-top-right d-flex'>
+              <span className='pokedex-left-border inner-border border--top2'/>
+              <span className='pokedex-left-border inner-border border--top3'/>
+            </div>
+          </div>
+
+          <div className='pokedex-left-border inner-border img-container--borders'>
+            <div className='pokedex-img-container'>
+              <img className='pokedex-img' src={item.img} alt="" />
+            </div>
+          </div>
         </div>
-        <p className="fs-5">{item.desc}</p>
-        <AddRemoveBttn item={item} bttnParent={parentItemDetail}/>
-      </div>
+
+        <div className='pokedex-hinge inner-border'>
+          <div>
+            <span className='hinge'></span>
+            <span className='hinge'></span>
+          </div>
+
+          <div>
+            <span className='hinge'></span>
+            <span className='hinge'></span>
+          </div>
+        </div>
+
+        <div className='pokedex-right-wrapper inner-border'>
+          
+          <h4 className='pokedex-title fs-1'>{item.name}</h4>
+
+          <p className="pokedex-info fs-5">{item.desc}</p>
+
+          <div className='d-flex align-items-center justify-content-between'>
+            <div>
+              <span className='pokedex-stock'>stock: </span>
+              <span className='pokedex-stock'>{item.stock}</span>
+            </div>
+            <div className='pokedex-price-container'>
+              <span className='price'>${item.price}</span>
+            </div>
+          </div>
+
+          <div className='pokedex-bttns-container'>
+            <button onClick={() => navigatehome(-1)} className={`item-bttn ${parentItemDetail} ${parentItemDetail}--on`}>volver</button>
+            <AddRemoveBttn item={item} bttnParent={parentItemDetail}/>
+          </div>
+        </div>
             
       </div>
     </section>

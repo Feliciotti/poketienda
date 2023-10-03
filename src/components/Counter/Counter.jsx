@@ -1,4 +1,3 @@
-import './counter.css'
 //context
 import { useCartContext } from '../../context/cartContext'
 

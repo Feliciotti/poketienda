@@ -1,0 +1,67 @@
+/* card bttn */
+.hiddenBttn{
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  height: 15%;
+
+  transition: all .4s ease-in-out;
+  border: 1px solid $card-bttn;
+  box-shadow: inset 0 0 4px 2px $card-bttn;
+}
+.hiddenBttn--on{
+  background-color: $card;
+}
+.hiddenBttn--on:hover{
+  color: rgb(0, 166, 50);
+}
+.hiddenBttn--off{
+  background-color: $card-bttnOff;
+  border: none;
+  color: grey
+}
+.hiddenBttn--off:hover{
+  color: black
+}
+
+/* pokedex bttn */
+.pokedex-bttn{
+  height: 4rem;
+  width: 45%;
+  text-shadow: 3px 3px 3px black;
+}
+.pokedex-bttn--on{
+  box-shadow: 0 0 3px 1px black;
+}
+.pokedex-bttn--off{
+  box-shadow:
+      inset 0 0 2px 1px rgb(0, 0, 0),
+      0 0 3px 1px black;
+  border: 1px solid black;
+}
+
+.pokedex-bttn--on:hover{
+  color: rgb(93, 255, 179);
+}
+.pokedex-bttn--off:hover{
+color: red
+}
+
+/* cart counter bttn*/
+.counter-bttns{
+  display: flex;
+  padding: .5rem;
+  gap: 1rem;
+
+  border-radius: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+
+  .counter-bttn{
+    background-color: transparent;
+    border: none;
+  
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+}

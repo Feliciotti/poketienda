@@ -4,6 +4,7 @@
 
 .pokenav{
   height: 6rem;
+  font-family: var(--font);
   font-size: 1.5rem;
 }
 
@@ -17,5 +18,5 @@
 }
 
 .pokenav-link.active{
-  color: green;
+  color: $pokedex;
 }

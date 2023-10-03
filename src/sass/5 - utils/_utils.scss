@@ -1,0 +1,10 @@
+.inner-border{
+  border-color: $pokedex-innerborder;
+  border-style: solid;
+}
+
+.content-box{
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}

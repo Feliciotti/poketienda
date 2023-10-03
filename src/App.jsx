@@ -10,7 +10,7 @@ function App() {
       <>
         <CartState>
           <NavBar/>
-          <main className='d-flex flex-column align-items-center p-5 main-container justify-content-center'>
+          <main className='main-container'>
             <Outlet/>
           </main>
         </CartState>
