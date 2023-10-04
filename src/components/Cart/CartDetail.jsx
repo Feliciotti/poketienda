@@ -13,15 +13,13 @@ function CartDetail({productInCart}) {
               <img className='product-img' src={productInCart.img} alt="Miniatura del producto" />
           </div>
           <div className="product-name-wrapper">
-            <p className='fs-3 m-0'>{productInCart.name} </p>
+            <p className='fs-3 m-0'>• {productInCart.name} </p>
             <span className="product-remove" onClick={() => removeItem(productInCart)}>Eliminar</span>
           </div>
         </div>
-
-        <div className="d-flex">
-          <Counter item={productInCart} count={productInCart.quantity} itemId={productInCart.id}/>
-        </div>
+        <Counter item={productInCart} count={productInCart.quantity} itemId={productInCart.id}/>
       </div>
+      <hr className="product-bottom-line"/>
     </>
   )
 }

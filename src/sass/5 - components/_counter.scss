@@ -1,16 +1,20 @@
 .counter-container{
+  width: 50%;
+  font-size: 1rem;
+
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 
   .counter, .counter-totalPrice{
-    font-size: 1.2rem;
     text-align: center;
   }
   .counter{
     width: 2rem;
   }
-  .counter-totalPrice{
-    width: 5rem;
+  .counter-total-price{
+    font-size: 1.5rem;
+    width: 3.5rem;
   }
 }

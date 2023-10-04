@@ -41,7 +41,7 @@ const ItemDetail = ({item}) =>{
 
         <div className='pokedex-right-wrapper inner-border'>
           
-          <h4 className='pokedex-title fs-1'>{item.name}</h4>
+          <h1 className='pokedex-title'>{item.name}</h1>
 
           <p className="pokedex-info fs-5">{item.desc}</p>
 

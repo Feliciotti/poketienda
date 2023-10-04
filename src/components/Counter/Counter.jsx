@@ -18,26 +18,27 @@ const Counter = ({item, count}) => {
   return (
     <div className='counter-container'>
       <div className='counter-bttns'>
-          <button onClick={handleRest} className="counter-bttn"
-            disabled={quantityReq == 1 ?
-              true
-              :
-              false
-            }
-            > - </button>
-          
-          <span className='counter'>
-              {count}
-          </span>
-          <button onClick={handleAdd} className="counter-bttn"
-            disabled={quantityReq == maxReq ?
-              true
-              :
-              false
-            }
-            > + </button>
+        <button onClick={handleRest} className="counter-bttn"
+          disabled={quantityReq == 1 ?
+            true
+            :
+            false
+          }
+        > - </button>
+        
+        <span className='counter'>
+            {count}
+        </span>
+        <button onClick={handleAdd} className="counter-bttn"
+          disabled={quantityReq == maxReq ?
+            true
+            :
+            false
+          }
+        > + </button>
       </div>
-      <span className='counter-totalPrice'>${totalPerProduct}</span>
+
+      <span className='counter-total-price'>${totalPerProduct}</span>
     </div>
   )
 }

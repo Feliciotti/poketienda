@@ -2,22 +2,25 @@
 @import './1 - settings/colors';
 @import './1 - settings/text';
 
+/* utils */
+@import './2 - tools/mixins';
+@import './2 - tools/animations';
 
 /* bases */
-@import './2 - bases/base';
-@import './2 - bases/resets';
+@import './3 - bases/base';
+@import './3 - bases/resets';
 
 /* elements */
-@import './3 - elements/button';
-@import './3 - elements/tittles';
+@import './4 - elements/button';
+@import './4 - elements/tittles';
 
 
 /* components */
-@import './4 - components/navbar';
-@import './4 - components/footer';
-@import './4 - components/item';
-@import './4 - components/counter';
-@import './4 - components/cart';
+@import './5 - components/navbar';
+@import './5 - components/footer';
+@import './5 - components/item';
+@import './5 - components/counter';
+@import './5 - components/cart';
 
 /* utils */
-@import './5 - utils/utils';
+@import './6 - utils/utils';

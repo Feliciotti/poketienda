@@ -24,16 +24,15 @@ const Cart = () =>{
             <p>Carrito vacío</p>
         ) : (
           <>
-            <div className='cart-list inner-border'>
-              <h3>Productos</h3>
-              <div className='list-products p-2'>
+            <div className='cart-list box-styling inner-border'>
+              <div className='list-products box-styling'>
                 {cartDetail}
               </div>
             </div>
             <div className='cart-options'>
-              <div className=''>
-                <h3>Resumen de compra</h3>
-                <span>Cantidad de productos: {totalItems()}</span>
+              <div className='box-styling inner-border'>
+                <h1>Resumen de compra</h1>
+                <span>Productos: {totalItems()}</span>
                 <span>Precio total: ${totalPurchaseValue()}</span>
               </div>
 
