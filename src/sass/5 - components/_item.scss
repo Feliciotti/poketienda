@@ -7,6 +7,7 @@
   border: solid 0.5rem $card;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px $box-shadow-black;
+
   &:hover{
     transform: translateY(-2%);
   }
@@ -81,6 +82,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation: slide-left .5s ease;
 }
 
 /* --------------- pokedex left --------------- */

@@ -17,7 +17,7 @@ const Cart = () =>{
 
   return(
     <section className='main-child d-flex justify-content-center'>
-      <div className='cart-list-container pokedex-box'>
+      <div className='cart-list-container pokedex-box fade-in'>
         {cart.length == 0 ? (
             <p>Carrito vacío</p>
         ) : (

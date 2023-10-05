@@ -6,7 +6,7 @@ import AddRemoveBttn from '../AddRemoveBttn/AddRemoveBttn'
 const Item = ({pokemon}) => {
   let parentCard = 'hiddenBttn' //styles class to send by props
   return (
-    <div className={`item-card effect-${pokemon.type}`}>
+    <div className={`item-card fade-in ${pokemon.type}`}>
       {/* link to ItemDetailContainer.jsx */}
       <Link className='card-content' to={`/item/${pokemon.name}`}>
         {/* pokemon type used as class name for card background color */}
