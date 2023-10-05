@@ -6,9 +6,9 @@
   overflow: hidden;
   border: solid 0.5rem $card;
   border-radius: 10px;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px 2px $box-shadow-black;
   &:hover{
-    transform: translateY(-5%);
+    transform: translateY(-2%);
   }
   &:hover .hiddenBttn{
     bottom: 0;
@@ -81,9 +81,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-  background-color: $pokedex;
-  border: 3px solid black;
 }
 
 /* --------------- pokedex left --------------- */
@@ -157,13 +154,6 @@
       
       display: flex;
       align-items: center;
-    
-      border-radius: 10px;
-      background-color: white;
-      border: 1px solid rgba(0, 0, 0, 0.5);
-      box-shadow:
-        inset 1px 1px 5px rgba(0, 0, 0, 0.3),
-        inset 0px 0px 5px rgba(0, 0, 0, 0.3);
 
       .pokedex-img{
         height: 95%;
@@ -185,7 +175,7 @@
   width: 3.5%;
   height: 100%;
   border-width: 0 3px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 5px $box-shadow-black;
 
   display: flex;
   flex-direction: column;
@@ -245,9 +235,11 @@
     padding: 0.5rem 0.6rem;
   
     border-radius: inherit;
-    background-color: rgb(0, 255, 238);
-    border: 3px solid rgb(0, 214, 225);
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.475);
+    background-color: $light-blue;
+    border: 4px solid rgb(0, 130, 210);
+    box-shadow:
+      0 0 5px 2px $box-shadow-black,
+      inset 0 0 5px 2px $box-shadow-black;
   }
   
   .pokedex-stock{
@@ -262,7 +254,7 @@
     background-color: white;
     box-shadow:
         inset 0 0 4px 2px rgba(137, 137, 137, 0.8),
-        0 0 4px 2px rgba(0, 0, 0, 0.3);
+        0 0 4px 2px $box-shadow-black;
   }
   
   .pokedex-price-container{

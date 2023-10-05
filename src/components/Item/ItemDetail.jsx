@@ -8,7 +8,7 @@ const ItemDetail = ({item}) =>{
 
   return(
     <section className="main-child">
-      <div className='pokedex-container content-box'>
+      <div className='pokedex-container pokedex-box'>
         <span className='pokedex-circle'></span>
 
         <div className='pokedex-left-wrapper'>
@@ -21,7 +21,7 @@ const ItemDetail = ({item}) =>{
           </div>
 
           <div className='pokedex-left-border inner-border img-container--borders'>
-            <div className='pokedex-img-container'>
+            <div className='pokedex-img-container pokedex-white-bg'>
               <img className='pokedex-img' src={item.img} alt="" />
             </div>
           </div>

@@ -19,7 +19,7 @@ function CartDetail({productInCart}) {
         </div>
         <Counter item={productInCart} count={productInCart.quantity} itemId={productInCart.id}/>
       </div>
-      <hr className="product-bottom-line"/>
+      <hr className="hr"/>
     </>
   )
 }

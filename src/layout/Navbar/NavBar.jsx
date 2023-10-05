@@ -4,10 +4,10 @@ import CartWidget from '../../components/Cart/CartWidget'
 
 export const NavBar = () => {
   return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary pokenav">
+      <nav className="navbar navbar-expand-lg pokenav">
         <div className="container-fluid">
           <NavLink className='navbar-brand pokenav-link' to='/'>
-            <img className='pokenav-logo' src="/Pokelogo.png" alt="" />
+            <img className='pokenav-logo' src="/imgs/navbar/Pokelogo.png" alt="" />
           </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

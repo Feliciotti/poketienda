@@ -13,7 +13,8 @@
 /* elements */
 @import './4 - elements/button';
 @import './4 - elements/tittles';
-
+@import './4 - elements/hr';
+@import './4 - elements/scrollbar';
 
 /* components */
 @import './5 - components/navbar';
@@ -21,6 +22,7 @@
 @import './5 - components/item';
 @import './5 - components/counter';
 @import './5 - components/cart';
+@import './5 - components/checkout';
 
 /* utils */
 @import './6 - utils/utils';

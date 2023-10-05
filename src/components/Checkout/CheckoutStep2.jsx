@@ -24,21 +24,13 @@ const CheckoutStep2 = ({shipping}) => {
     e.preventDefault()
     formNavigate('/checkout/step3', {state: clientData})
   }
-  const handleReturn = (e) =>{
-    e.preventDefault()
-    formNavigate('/checkout/step1')
-  }
-
 
   return(
     <>
       <form onSubmit={handleSubmit} onChange={handleChange} 
-      className='main-child checkout2-form
-      d-flex flex-column align-items-center justify-content-evenly'>
+      className='main-child checkout2-form slide-up'>
         <h1>Datos</h1>
-        <div className='form-inputs-container
-        d-flex flex-column align-items-center
-        gap-3'>
+        <div className='form-inputs-container'>
           <div className='form-input-wrapper'>
             <label className='input-label' htmlFor="full-name">nombre completo</label>
             <input className='input'
@@ -81,9 +73,9 @@ const CheckoutStep2 = ({shipping}) => {
           </div>
         </div>
         
-        <div className='form-bttns-wrapper d-flex justify-content-between'>
-          <button className='form-bttn cart-bttn' onClick={handleReturn}>Atrás</button>
-          <button className='form-bttn cart-bttn' type='submit'>Siguiente</button>
+        <div className='ch2-bttns-container'>
+          <button className='large-bttn' onClick={() => formNavigate(-1)}>Atrás</button>
+          <button className='large-bttn' type='submit'>Siguiente</button>
         </div>
       </form>
     </>

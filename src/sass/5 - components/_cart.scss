@@ -18,22 +18,9 @@
     .list-products{
       width: 100%;
       height: inherit;
+      color: black;
       padding: .5rem 1rem;
       overflow-y: scroll;
-
-      color: black;
-      background-color: white;
-
-      &::-webkit-scrollbar {
-        width: .5rem;
-      }
-      &::-webkit-scrollbar-track {
-        background-color: transparent;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 1rem;
-      }
     }
   }
 
@@ -104,8 +91,52 @@
     }
   }
 }
-.product-bottom-line{
-  border: 0;
-  border-bottom: .2rem dashed rgb(232, 232, 232);
-  background: #000000;
+/* ----------------------- CartWidget.jsx ----------------------- */
+
+.pokewidget{
+  width: 85px;
+  height: auto;
+}
+.pokewidget-counter{
+  width: 25px;
+  text-align: center;
+}
+.pokeball{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 2px black;
+  background:
+  /* pokeball middle bttn */
+  radial-gradient(
+    white 0 10%,
+    black 15% 16%,
+    white 20% 26%,
+    black 31% 32%,
+    transparent 36%
+  ),
+  /* pokeball background */
+  linear-gradient(
+    rgb(231, 0, 0) 0 45%,
+    black 45% 55%,
+    white 55%);
+  overflow: hidden;
+  box-shadow: inset -5px -3px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.pokeball.shake{
+  animation: shake .7s;
+}
+.pokeball.shake::before{
+  content: "";
+  position: absolute;
+  top: calc(50% - 10%);
+  left: calc(50% - 10%);
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #ff000084;
+  box-shadow: 0 0 50px #ff000084;
+  border: 1px solid black;
 }

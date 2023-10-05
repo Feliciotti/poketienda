@@ -1,11 +1,18 @@
 :root{
-  --body-bg: rgba(218, 216, 216, 0.8);
-  --content-bg: rgb(255,255,255);
-  --body-shadow: 0px 2px 5px 1px rgba(83, 83, 83, 0.1);
+  --body-bg: rgb(219, 219, 219);
+  --content-bg: #ededed;
+  --body-shadow: rgba(98, 98, 98, 0.5);
 }
+
+$footer: rgb(30,30,30);
 
 $pokedex: rgb(173, 0, 0);
 $pokedex-innerborder: rgb(111, 0, 0);
 $card: rgb(255, 230, 0);
 $card-bttn: rgb(255, 196, 0);
 $card-bttnOff: rgb(255, 241, 114);
+
+$light-blue: rgb(0, 175, 210);
+$blue: rgb(0, 130, 210);
+
+$box-shadow-black: rgba(0, 0, 0, 0.3);

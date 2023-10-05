@@ -8,7 +8,7 @@ import Cart from "../components/Cart/Cart"
 import CheckoutStep1 from "../components/Checkout/CheckoutStep1"
 import CheckoutStep2 from "../components/Checkout/CheckoutStep2"
 import CheckoutStep3 from "../components/Checkout/CheckoutStep3"
-import PurchaseSuccess from "../components/Checkout/PurchaseSuccess"
+import CheckoutSuccess from "../components/Checkout/CheckoutSuccess"
 
 
 export const router = createBrowserRouter([
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
          },
          {
             path: '/checkoutSuccess',
-            element: <PurchaseSuccess/>
+            element: <CheckoutSuccess/>
          }
       ]
    }

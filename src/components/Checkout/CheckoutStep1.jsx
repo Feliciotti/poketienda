@@ -15,13 +15,13 @@ const CheckoutStep1 = () => {
 
   return (
     <>
-    <div className='main-child d-flex flex-column align-items-center p-3'>
+    <div className='main-child slide-up p-3'>
       <h1 className='checkout1-title'>Formas de entrega</h1>
-      <div className='d-flex flex-column gap-5 align-items-center'>
-        <div onClick={handleNoShipDelivery} className="delivery-selector">
+      <div className='checkout-delivery-options'>
+        <div onClick={handleNoShipDelivery} className="delivery-option">
           <h2>Retiro por Pueblo Paleta <span className='delivery-price'>¡Gratis!</span></h2>
         </div>
-        <div onClick={handleShipDelivery} className='delivery-selector'>
+        <div onClick={handleShipDelivery} className='delivery-option'>
           <h2>Envío a domicilio <span className='delivery-price'>$50</span></h2>
         </div>
       </div>

@@ -3,19 +3,29 @@
   padding: 1rem;
 
   font-family: var(--font);
-  background-color: rgba(218, 216, 216, 0.8);
+  background-color: var(--body-bg);
+
+  background-image: url(https://66.media.tumblr.com/tumblr_mai132OrFS1rfjowdo1_500.gif);
+  background-position: right bottom;
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   & > *{
     width: 80%;
     border-radius: 1rem;
     margin-bottom: 2rem;
-    box-shadow: 0px 2px 5px 1px rgba(83, 83, 83, 0.1);
+
+    background-color: var(--content-bg);
+    box-shadow: 0px 2px 5px 1px var(--body-shadow);
   }
 }
 
 .main-container{
   height: fit-content;
-  background: rgb(255,255,255);
+  overflow: hidden;
   padding: 3rem;
+
 
   & > .main-child{
     height: calc(100vh - 17rem);

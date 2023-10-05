@@ -1,3 +1,4 @@
+// box styling
 .inner-border{
   border-color: $pokedex-innerborder;
   border-style: solid;
@@ -9,8 +10,24 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.content-box{
+.pokedex-box{
   border: 3px solid black;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: $pokedex;
+  box-shadow: 5px 5px 5px $box-shadow-black;
+}
+
+.pokedex-white-bg{
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 5px 2px $box-shadow-black,
+    inset 1px 1px 5px $box-shadow-black,
+    inset 0px 0px 5px $box-shadow-black;
+}
+
+//animations
+.slide-up{
+  animation: slide-up .5s;
 }
