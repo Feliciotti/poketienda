@@ -1,7 +1,7 @@
 //dependencies
 import { useNavigate } from 'react-router-dom';
 //db
-import db from '../../firebase/config';
+import db from '../../services/firestore';
 import {addDoc, collection } from 'firebase/firestore/lite'
 //components
 import withRouter from './hoc/checkout'
@@ -29,7 +29,7 @@ const CheckoutStep3 = ({client, order, totalPurchaseValue}) => {
     purchase_summary.products = order
     purchase_summary.total = totalPurchaseValue
       
-    const orderCollection = collection(db, 'orders');
+    const orderCollection = collection(db, import.meta.env.VITE_FIRESTORE_ORDERS);
     addDoc(orderCollection, purchase_summary)
       .then(res => (checkout3navigate('/checkoutSuccess', {state:res.id})))
   }
