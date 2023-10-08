@@ -16,7 +16,7 @@ export const NavBar = () => {
             <ul className="navbar-nav align-items-center">
               <li className="nav-item">
                 <NavLink className='pokenav-link' to='/'>
-                  Productos
+                  Pokemones
                 </NavLink>
               </li>
               <li className="nav-item">
