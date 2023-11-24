@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 //context
-import { useCartContext } from '../../context/cartContext'
+import { useCartContext } from '../../context/cartContext.js'
 
 
 //function
