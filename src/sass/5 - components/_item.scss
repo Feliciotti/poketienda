@@ -4,6 +4,7 @@
   height: 25rem;
   position: relative;
   overflow: hidden;
+
   border: solid 0.5rem $card;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px $box-shadow-black;
@@ -124,24 +125,26 @@
   .borders-top-wrapper{
     height: 3rem;
     gap: 0.5rem;
+
+    .border--top1, .border--top2, .border--top3{
+      width: 50%;
+    }
   
     .border--top1{
-      width: 50%;
       border-width: 0 0 3px;
     }
     .borders-top-right{
       width: inherit;
-    }
-    .border--top2{
-      width: 50%;
-      border-width: 3px 0 0 3px;
-      border-top-left-radius: 10px;
-      transform: skewX(-0.06turn);
-    }
-    .border--top3{
-      width: 50%;
-      border-width: 3px 3px 0 0;
-      border-top-right-radius: 10px;
+
+      .border--top2{
+        border-width: 3px 0 0 3px;
+        border-top-left-radius: 10px;
+        transform: skewX(-0.06turn);
+      }
+      .border--top3{
+        border-width: 3px 3px 0 0;
+        border-top-right-radius: 10px;
+      }
     }
   }
   .img-container--borders{
@@ -203,9 +206,9 @@
   padding: 1rem;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 
   border-radius: inherit;
   border-width: 3px;
@@ -226,6 +229,7 @@
   .pokedex-title{
     height: 70px;
     padding: 0 2rem;
+    margin: 0;
     text-align: center;
     
     display: inherit;
@@ -236,8 +240,8 @@
   }
   
   .pokedex-info{
-    margin: 1.5rem 0;
     padding: 0.5rem 0.6rem;
+    margin: 0;
   
     border-radius: inherit;
     background-color: $light-blue;
@@ -285,9 +289,147 @@
   }
   
   .pokedex-bttns-container{
-    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+//-----------------------------------------------------------------------------------------
+@media only screen and (max-width: calc($tablet-min - 1px)) {
+  /* ----------------------- ItemDetail.jsx ----------------------- */
+  .pokedex-container{
+    height: fit-content;
+    flex-direction: column;
+    padding: 1.6rem 1rem 1rem;
+  }
+
+  /* --------------- pokedex top --------------- */ //smartphone min
+  .pokedex-circle{
+    width: 50px;
+    height: 50px;
+  }
+
+  .pokedex-left-wrapper{
+    width: 100%;
+    height: 350px;
+
+    .borders-top-wrapper{
+      .border--top1{
+        border-width: 0 0 2px;
+      }
+      .borders-top-right{
+        .border--top2{
+          border-width: 2px 0 0 2px;
+        }
+        .border--top3{
+          border-width: 2px 2px 0 0;
+        }
+      }
+    }
+    .img-container--borders{
+      padding: .5rem;
+      border-width: 0 2px 2px;
+    
+      .pokedex-img-container{
+        padding: inherit;
+        .pokedex-img{
+          width: 100%;
+
+          &:hover{
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+
+  /* --------------- hinge --------------- */
+  .pokedex-hinge{
+    width: 200%;
+    height: 2rem;
+    border-width: 2px;
+    box-shadow: none;
+    margin: 1rem;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+
+    &>*{
+      width: 5%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .hinge{
+        width: 3px;
+        height: 100%;
+      }
+    }
+
+  }
+
+/* --------------- pokedex bottom --------------- */
+
+  .pokedex-right-wrapper{
+    width: 100%;
+    height: 350px;
+    padding: 0;
+    border-width: 2px;
+
+    /* ------------------------------------ */
+    .pokedex-title{
+      height: 55px;
+      padding: 0 2rem;
+    }
+    
+    .pokedex-info{
+      padding: 0.5rem;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    
+    .pokedex-stock{
+      width: 50px;
+      height: 40px;
+
+      font-size: 1.3rem;
+    }
+    
+    .pokedex-price-container{
+      width: 60px; 
+      height: 60px;
+    
+      .price{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet-min) and (max-width: $tablet-max){
+  .pokedex-container{
+    height: 65%;
+  }
+  .pokedex-left-wrapper{
+    padding-top: 1rem;
+  }
+
+  .pokedex-right-wrapper{
+    
+    .pokedex-info{
+      padding: .4rem;
+      line-height: 1.3rem;
+    }
+    
+    .pokedex-stock{
+      width: 55px;
+      height: 45px;
+
+      font-size: 1.3rem;
+    }
   }
 }

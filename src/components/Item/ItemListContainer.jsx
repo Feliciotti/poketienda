@@ -18,7 +18,7 @@ const ItemListContainer = () => {
       { loading ?
        <Loading/>
       :
-        <section className='itemListContainer cointainer'>
+        <section className='itemListContainer'>
           <ItemList pokemonList={pokemonList}/>
         </section>
       }

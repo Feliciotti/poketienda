@@ -1,7 +1,7 @@
-import React from 'react'
-import { useReducer } from 'react'
-import { cartContext } from './cartContext'
-import cartReducer from './cartReducer'
+import React from 'react';
+import { useReducer } from 'react';
+import { cartContext } from './cartContext';
+import cartReducer from './cartReducer';
 
 function CartState(props) {
 

@@ -43,7 +43,7 @@ const ItemDetail = ({item}) =>{
           
           <h1 className='pokedex-title'>{item.name}</h1>
 
-          <p className="pokedex-info fs-5">{item.desc}</p>
+          <p className="pokedex-info">{item.desc}</p>
 
           <div className='d-flex align-items-center justify-content-between'>
             <div>

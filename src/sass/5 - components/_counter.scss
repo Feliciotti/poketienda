@@ -18,3 +18,21 @@
     width: 3.5rem;
   }
 }
+
+//-------------------------------------------------------------------------
+@media only screen and (max-width: $smartphone-max) {
+  .counter-container{
+    width: 100%;
+    font-size: 1rem;
+  
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: calc($smartphone-max + 1px)) and (max-width: $tablet-max) {
+  .counter-container{
+    width: fit-content;
+    flex-direction: column;
+    gap: 0;
+  }
+}

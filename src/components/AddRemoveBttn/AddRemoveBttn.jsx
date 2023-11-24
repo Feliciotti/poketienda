@@ -1,5 +1,4 @@
 import { useCartContext } from '../../context/cartContext'
-import './addRemoveBttn.css'
 
 const AddRemoveBttn = ({item, bttnParent}) => {
   const { addItem, isInCart, removeItem } = useCartContext()
@@ -17,7 +16,7 @@ const AddRemoveBttn = ({item, bttnParent}) => {
           </>
       ):(
           <button className={`item-bttn ${bttnParent} ${bttnParent}--off`} onClick={() => removeItem(item)}>
-            eliminar del carrito
+            eliminar
           </button>
       )}
     </>

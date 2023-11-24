@@ -4,6 +4,7 @@
   bottom: -100%;
   width: 100%;
   height: 15%;
+  font-size: 2rem;
 
   transition: all .4s ease-in-out;
   border: 1px solid $card-bttn;
@@ -29,6 +30,9 @@
   height: 4rem;
   width: 45%;
   text-shadow: 3px 3px 3px black;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
 }
 .pokedex-bttn--on{
   box-shadow: 0 0 3px 1px black;
@@ -97,5 +101,17 @@ color: red
   
     font-size: 1.5rem;
     font-weight: bolder;
+  }
+}
+
+@media only screen and (max-width: $tablet-max) {
+  .hiddenBttn{
+    bottom: 0;
+  }
+
+
+  .item-bttn{
+    font-size: 1.3rem;
+    height: 3rem;
   }
 }
