@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 //components
 import {NavBar, Footer} from './layout/index'
 //state
-import CartState from './context/CartState'
+import CartState from './context/cartState'
 
 function App() {
   return (
