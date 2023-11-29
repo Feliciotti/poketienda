@@ -1,6 +1,6 @@
 //components
 import { useNavigate } from 'react-router-dom'
-import AddRemoveBttn from '../common/index'
+import { AddRemoveBttn } from '../common/index'
 
 const ItemDetail = ({item}) =>{
   let parentItemDetail = 'pokedex-bttn'
