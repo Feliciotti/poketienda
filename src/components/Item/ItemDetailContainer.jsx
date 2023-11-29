@@ -1,7 +1,7 @@
 import { useState } from "react"
 // components
 import ItemDetail from "./ItemDetail"
-import Loading from "../Loading/Loading"
+import Loading from "../common/index"
 //hooks
 import { useGetDB, useScrollTop } from "../../hooks/index"
 

@@ -1,4 +1,4 @@
-import Counter from "../Counter/Counter"
+import Counter from "../common/index"
 import { useCartContext } from "../../context/cartContext"
 
 function CartDetail({productInCart}) {

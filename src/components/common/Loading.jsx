@@ -1,4 +1,4 @@
-const Loading = () => {
+export const Loading = () => {
 
   return (
     <section className="main-child d-flex align-items-center justify-content-center">
@@ -6,5 +6,3 @@ const Loading = () => {
     </section>
   )
 }
-
-export default Loading

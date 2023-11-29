@@ -1,7 +1,7 @@
 //context
 import { useCartContext } from '../../context/cartContext'
 
-const Counter = ({item, count}) => {
+export const Counter = ({item, count}) => {
   const { addItem } = useCartContext()
 
   let maxReq = Number(item.stock)
@@ -42,5 +42,3 @@ const Counter = ({item, count}) => {
     </div>
   )
 }
-
-export default Counter

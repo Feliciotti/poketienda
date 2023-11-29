@@ -1,7 +1,7 @@
 //dependencies
 import { Link } from 'react-router-dom';
 //components
-import AddRemoveBttn from '../AddRemoveBttn/AddRemoveBttn'
+import AddRemoveBttn from '../common/index'
 
 const Item = ({pokemon}) => {
   let parentCard = 'hiddenBttn' //styles class to send by props

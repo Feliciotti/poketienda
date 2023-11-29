@@ -1,6 +1,6 @@
 import { useCartContext } from '../../context/cartContext'
 
-const AddRemoveBttn = ({item, bttnParent}) => {
+export const AddRemoveBttn = ({item, bttnParent}) => {
   const { addItem, isInCart, removeItem } = useCartContext()
   
   const onAdd = () =>{
@@ -22,5 +22,3 @@ const AddRemoveBttn = ({item, bttnParent}) => {
     </>
   )
 }
-
-export default AddRemoveBttn

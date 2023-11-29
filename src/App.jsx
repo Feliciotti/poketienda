@@ -1,7 +1,7 @@
 //dependencies
 import { Outlet } from 'react-router-dom'
 //components
-import {NavBar, Footer} from './layout/index'
+import {NavBar, Footer} from './components/common/index'
 //state
 import CartState from './context/cartState'
 

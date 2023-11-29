@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 //components
 import App from "../App"
-import { NotFound } from "../layout/index"
+import { NotFound } from "../components/common/index"
 import { ItemListContainer } from "../components/Item/ItemListContainer"
 import { ItemDetailContainer } from "../components/Item/ItemDetailContainer"
 import Cart from "../components/Cart/Cart"

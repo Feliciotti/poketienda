@@ -1,0 +1,6 @@
+export { NavBar } from './NavBar'
+export { Footer } from './Footer'
+export { NotFound } from './NotFound'
+export { Loading } from './Loading'
+export { Counter } from './Counter'
+export { AddRemoveBttn } from './AddRemoveBttn'
